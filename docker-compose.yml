@@ -4,6 +4,4 @@ services:
         build: .
         ports:
             - "80:80"
-        volumes:
-            - ${PROJECTFOLDER}:/usr/local/apache2/htdocs/
 
