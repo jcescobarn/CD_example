@@ -6,9 +6,13 @@ name: Docker
 # documentation.
 
 on:
-  pull_request:
+  schedule: 
+        - cron: '34 12 * * *'
+  push:
     branches: [ master ]
     tags: [ 'v*.*.*' ]
+  pull_request:
+    branches: [ master ]
 
 env:
   # Use docker.io for Docker Hub if empty
