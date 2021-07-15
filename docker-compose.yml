@@ -1,7 +1,11 @@
 version: '3.5'
 services:
-    web:
-        build: .
-        ports:
-            - "80:80"
+  test-automation-deployment:
+    container_name: test-deployment 
+    image: ghcr.io/jcescobarn/cd_example:pr-13 
+    restart: unless-stopped
+networks:
+    default:
+        name: idea
+        external: true
 
