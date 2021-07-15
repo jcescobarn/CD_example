@@ -2,7 +2,7 @@ version: '3.5'
 services:
   test-automation-deployment:
     container_name: test-deployment 
-    image: ghcr.io/jcescobarn/cd_example:pr-13 
+    image: ghcr.io/jcescobarn/cd_example:master
     restart: unless-stopped
 networks:
     default:
