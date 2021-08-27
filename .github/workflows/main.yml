@@ -42,6 +42,7 @@ jobs:
 
       - name: build project
         run: |
+          cd hello-world
           npm install
           npm run build
 
