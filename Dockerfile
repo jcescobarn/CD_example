@@ -1,3 +1,5 @@
-FROM httpd:latest
+FROM nginx:latest
+COPY ./dist /usr/share/nginx/html
+EXPOSE 80
+CMD ["nginx","-g", "daemon off;"]
 
-COPY ./code /usr/local/apache2/htdocs/test
