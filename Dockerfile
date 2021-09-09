@@ -1,6 +1,5 @@
-FROM nginx:latest
-RUN ls
-COPY ./dist/* /usr/share/nginx/html
+FROM httdp:2.4.48 as web
+COPY ./dist /usr/local/apache2/htdocs/
 EXPOSE 80
-CMD ["nginx","-g", "daemon off;"]
+CMD ["rm","50x.html"]
 
