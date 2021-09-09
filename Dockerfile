@@ -1,6 +1,6 @@
 FROM nginx:latest
-RUN ls
-COPY ./dist/* /usr/share/nginx/html
+COPY ./dist /usr/share/nginx/html
 EXPOSE 80
+CMD ["rm","50x.html"]
 CMD ["nginx","-g", "daemon off;"]
 
